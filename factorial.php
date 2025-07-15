@@ -5,7 +5,7 @@
 <body>
     Enter a number to find it's factorial : 
     <form action="factorial.php" method="get">
-        <input type="number" name="num" />
+        <input type="number" name="num" value=<?php echo $_GET['num'] ?> />
 
         <input type="submit" value="submit" name="submit"/>
     </form>
