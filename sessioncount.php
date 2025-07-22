@@ -4,7 +4,7 @@
 		$_SESSION['counter'] += 1;
 	}
 	else{
-		$_SESSION['counter'] = 0;
+		$_SESSION['counter'] = 1;
 	}
 	echo "Visited : " . $_SESSION['counter'];
 ?>
