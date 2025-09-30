@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies</title>
+</head>
+<body>
+    <h3>Movies (Descending by Year)</h3>
+    <button onclick="show()">Show</button>
+    <div id="result"></div>
+    <script>
+        const movies = [
+            {name: "Inception", year: 2010},
+            {name: "The Dark Knight", year: 2008},
+            {name: "Interstellar", year: 2014},
+            {name: "Pulp Fiction", year: 1994},
+            {name: "1984", year: 1984}
+        ];
+        function show() {
+            let sorted = movies.sort((a, b) => b.year - a.year);
+            let t = "<table border='1'><tr><th>Movie</th><th>Year</th></tr>";
+            sorted.forEach(m => t += `<tr><td>${m.name}</td><td>${m.year}</td></tr>`);
+            document.getElementById("result").innerHTML = t + "</table>";
+        }
+    </script>
+</body>
+</html>

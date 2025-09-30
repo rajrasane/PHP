@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX 3</title>
+</head>
+<body>
+    <button onclick="LoadPara()">Load Paragraph</button><br><br>
+    <div id="para"></div>
+    <script>
+        let LoadPara = () =>{
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = () => {
+                if(xhttp.readyState==4 && xhttp.status==200){
+                    document.getElementById("para").innerText = xhttp.response;
+                }
+            }
+            xhttp.open("GET","03.php",true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

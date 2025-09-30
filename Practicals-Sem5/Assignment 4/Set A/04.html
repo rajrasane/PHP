@@ -1,0 +1,20 @@
+<html>
+    <body>
+        Enter city:<input type="text" id="inp" onkeyup="loadDoc()">
+        <div id="demo"></div>
+        <script>
+            function loadDoc(){
+                var xhttp = new XMLHttpRequest();
+                var n1 = document.getElementById("inp").value
+                xhttp.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        let text = this.responseText
+                        document.getElementById("demo").innerHTML = text;
+                    }
+                }
+                xhttp.open("GET", "04.php?name="+n1, true);
+                xhttp.send()
+            }
+        </script>
+    </body>
+</html>

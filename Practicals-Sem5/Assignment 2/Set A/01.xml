@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Items>
+    <Item type="Stationery">
+        <ItemName>Pen</ItemName>
+        <ItemPrice>10</ItemPrice>
+        <Quantity>10</Quantity>
+    </Item>
+    <Item type="Beverage">
+        <ItemName>Burger</ItemName>
+        <ItemPrice>5</ItemPrice>
+        <Quantity>20</Quantity>
+    </Item>
+    <Item type="Furniture">
+        <ItemName>Chair</ItemName>
+        <ItemPrice>2</ItemPrice>
+        <Quantity>30</Quantity>
+    </Item>
+    <Item type="Electronics">
+        <ItemName>Monitor</ItemName>
+        <ItemPrice>100</ItemPrice>
+        <Quantity>5</Quantity>
+    </Item>
+    <Item type="Clothing">
+        <ItemName>Shirt</ItemName>
+        <ItemPrice>50</ItemPrice>
+        <Quantity>15</Quantity>
+    </Item>
+</Items>

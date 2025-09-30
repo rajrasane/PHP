@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+</head>
+<body>
+    <h3>Product Details</h3>
+    <input type="text" id="pid" placeholder="Product ID">
+    <button onclick="getProduct()">Get</button>
+    <div id="result"></div>
+    <script>
+        function getProduct() {
+            let id = document.getElementById("pid").value;
+            if (!id) return;
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("result").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "04.php?pid=" + id, true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

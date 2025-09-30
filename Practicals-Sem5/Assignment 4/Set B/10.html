@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Sum</title>
+</head>
+<body>
+    <h3>JSON Array Sum</h3>
+    <input type="text" id="arr" value="" size="30">
+    <button onclick="calc()">Calculate</button>
+    <div id="result"></div>
+    <script>
+        function calc() {
+            try {
+                let arr = JSON.parse(document.getElementById("arr").value);
+                let sum = arr.reduce((a, b) => a + b, 0);
+                document.getElementById("result").innerHTML = "<p>Sum: " + sum + "</p>";
+            } catch(e) {
+                document.getElementById("result").innerHTML = "<p>Error: Invalid JSON</p>";
+            }
+        }
+    </script>
+</body>
+</html>

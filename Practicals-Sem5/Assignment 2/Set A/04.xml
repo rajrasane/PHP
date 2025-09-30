@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Students>
+    <student>
+        <rollno>1</rollno>
+        <name>Raj</name>
+        <marks>100</marks>
+    </student>
+    <student>
+        <rollno>2</rollno>
+        <name>Onkar</name>
+        <marks>90</marks>
+    </student>
+    <student>
+        <rollno>3</rollno>
+        <name>Viraj</name>
+        <marks>70</marks>
+    </student>
+</students>

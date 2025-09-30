@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <h3>Click below button to print the Contact Details in Table Format</h3><br>
+    <button onclick="PrintContact()" >Print</button><br><br>
+    <div id="Details"></div>
+    <script>
+        let PrintContact = () => {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = () => {
+                if(xhttp.readyState==4 && xhttp.status==200){
+                    let data = xhttp.responseText;
+                    let rows = data.split("\n");
+                    let table = "<table border='1'><tr><th>Srno</th><th>Name</th><th>Residence Number</th><th>Mobile Number</th><th>Address</th></tr>";
+                    for(let i=0;i<rows.length;i++){
+                        let cols = rows[i].split(" ");
+                        table += "<tr>";
+                        for(let j=0;j<cols.length;j++){
+                            table += "<td>"+cols[j]+"</td>";
+                        }
+                        table += "</tr>";
+                    }
+                    table += "</table>";
+                    document.getElementById("Details").innerHTML = table;
+                }
+            }
+            xhttp.open("GET","Contact.dat",true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

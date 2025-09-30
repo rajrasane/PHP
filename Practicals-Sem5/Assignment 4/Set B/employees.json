@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "position": "Software Engineer",
+        "department": "IT",
+        "salary": 75000
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "position": "Project Manager",
+        "department": "Management",
+        "salary": 85000
+    },
+    {
+        "id": 3,
+        "name": "Bob Johnson",
+        "position": "Database Administrator",
+        "department": "IT",
+        "salary": 70000
+    },
+    {
+        "id": 4,
+        "name": "Alice Brown",
+        "position": "HR Manager",
+        "department": "Human Resources",
+        "salary": 65000
+    },
+    {
+        "id": 5,
+        "name": "Charlie Wilson",
+        "position": "Marketing Specialist",
+        "department": "Marketing",
+        "salary": 60000
+    }
+]

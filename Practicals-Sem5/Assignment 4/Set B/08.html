@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+</head>
+<body>
+    <h3>Courses</h3>
+    <select id="courses"></select>
+    <div id="info"></div>
+    <script>
+        const courses = [
+            {id: 1, name: "Web Dev", duration: "6 months"},
+            {id: 2, name: "Data Science", duration: "8 months"},
+            {id: 3, name: "ML", duration: "10 months"}
+        ];
+        window.onload = function() {
+            let s = "<option value=''>Select</option>";
+            courses.forEach(c => s += `<option value='${c.id}'>${c.name}</option>`);
+            document.getElementById("courses").innerHTML = s;
+        };
+        document.getElementById("courses").onchange = function() {
+            let id = this.value;
+            if (id) {
+                let c = courses.find(x => x.id == id);
+                document.getElementById("info").innerHTML = `<p>${c.name} - ${c.duration}</p>`;
+            }
+        };
+    </script>
+</body>
+</html>

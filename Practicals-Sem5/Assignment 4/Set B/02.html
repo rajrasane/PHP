@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Orders</title>
+</head>
+<body>
+    <h3>Select Customer</h3>
+    <select id="customer" onchange="getData()">
+        <option value="">Select</option>
+        <option value="1">John Doe</option>
+        <option value="2">Jane Smith</option>
+    </select>
+    <div id="orderDetails"></div>
+    <script>
+        function getData() {
+            let id = document.getElementById("customer").value;
+            if (!id) return;
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("orderDetails").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "02.php?var=" + id, true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

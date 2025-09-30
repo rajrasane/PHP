@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="student" placeholder="Enter name" onblur="checkName()">
+    <img id="img" src="https://i.pinimg.com/474x/9e/93/81/9e938132dfffde20232d70178eb52102.jpg" style="display:none;" 
+        onmouseover="this.style.width='150px'" 
+        onmouseout="this.style.width='100px'" 
+        onclick="this.style.height='150px'" 
+        onmouseup="this.style.height='100px'">
+
+    <script>
+    function checkName(){
+    let txt=document.getElementById("student");
+    if(txt.value){
+        txt.style.color="red";
+        txt.style.fontSize="18px";
+    } else {
+        document.getElementById("img").style.display="block";
+    }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees</title>
+</head>
+<body>
+    <h3>Employees</h3>
+    <button onclick="load()">Load</button>
+    <div id="result"></div>
+    <script>
+        function load() {
+            fetch('employees.json')
+                .then(r => r.json())
+                .then(data => {
+                    let t = "<table border='1'><tr><th>Name</th><th>Position</th></tr>";
+                    data.forEach(e => t += `<tr><td>${e.name}</td><td>${e.position}</td></tr>`);
+                    document.getElementById("result").innerHTML = t + "</table>";
+                });
+        }
+    </script>
+</body>
+</html>
